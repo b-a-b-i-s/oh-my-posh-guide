@@ -44,7 +44,6 @@
             "cache_timeout": 10
           }
         },
-
         {
           "background": "#ffcc00",
           "background_templates": [
@@ -63,6 +62,97 @@
           "style": "powerline",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
+        },
+        {
+          "type": "java",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#4063D8",
+          "template": " \uE738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Major }}{{ end }} "
+        },
+        {
+          "background": "#6CA35E",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        },
+        {
+          "background": "#8ED1F7",
+          "foreground": "#111111",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": " \ue626 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "go"
+        },
+        {
+          "background": "#4063D8",
+          "foreground": "#111111",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": " \ue624 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "julia"
+        },
+        {
+          "background": "#FFDE57",
+          "foreground": "#111111",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "display_mode": "files",
+            "fetch_virtual_env": false
+          },
+          "style": "powerline",
+          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "python"
+        },
+        {
+          "background": "#AE1401",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "display_mode": "files",
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "ruby"
+        },
+        {
+          "background_templates": [
+            "{{if contains \"default\" .Profile}}#FFA400{{end}}",
+            "{{if contains \"jan\" .Profile}}#f1184c{{end}}"
+          ],
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "display_default": false
+          },
+          "style": "powerline",
+          "template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
+          "type": "aws"
+        },
+        {
+          "background": "#FEAC19",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "display_mode": "files",
+            "fetch_version": true
+          },
+          "style": "powerline",
+          "template": " \uf0e7{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "azfunc"
         },
         {
           "background": "#ffff66",
@@ -134,6 +224,30 @@
           "template": " {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b4",
           "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "#ebcc34",
+          "foreground": "#000000",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " \ufd31 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "kubectl"
+        },
+        {
+          "background": "#9ec3f0",
+          "foreground": "#000000",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " \ufd03 Subscription {{ .Name }} ({{ if .EnvironmentName | contains \"AzureCloud\" }}{{ \"Global\" }}{{ else }}{{ .EnvironmentName }}{{ end }}) ",
+          "type": "az"
         }
       ],
       "type": "prompt"
