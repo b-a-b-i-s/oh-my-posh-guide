@@ -27,7 +27,7 @@
             "style": "full"
           },
           "style": "powerline",
-          "template": " \ue5ff {{ .Path }} ",
+          "template": " \ue5ff {{ path .Path .Location }} ",
           "type": "path"
         },        {
           "type": "owm",
