@@ -17,7 +17,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 
 ## Configure Powershell
 
-`notepad $PROFILE` (Create new file with `New-Item -Path $PROFILE -Type File -Force` if not prompted to create)
+`notepad $PROFILE.CurrentUserAllHosts` (Create new file with `New-Item -Path $PROFILE.CurrentUserAllHosts -Type File -Force` if not prompted to create)
 
 Add the following line to the file
 
@@ -37,15 +37,21 @@ I have customized the thecyberden with some extra stuff in [.thecyberden-babis.o
 
 ## Use nerd font to show icons
 
-Download Meslo font: <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip>
+Nerd Fonts are used to show icons in the console. [Website](https://www.nerdfonts.com/) | [Github](https://github.com/ryanoasis/nerd-fonts)
+
+You can use any nerd font. I recommend Meslo or Caskaydia Cove.
+
+Download Meslo font (Patched Apple's Menlo font, recommended by oh-my-posh): <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip>
 
 Extract and install `Meslo LG M Regular Nerd Font Complete Mono Windows Compatible.ttf` or/and `Meslo LG S Regular Nerd Font Complete Mono Windows Compatible.ttf`. I prefer small but Medium is also needed for correct sizing in IntelliJ.
 
+For Open Weather Maps segment (for my custom theme) to show correctly in Windows Terminal you can use [Caskaydia Cove Nerd Font Complete Mono Windows Compatible.tff](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip).
+
 ## Use in Windows Terminal
 
-MesloLGM NF for Medium / MesloLGS NF for Small
+Settings > Defaults > Appearance > Font face > MesloLGM NF / MesloLGS NF / CaskaydiaCove NF
 
-![terminal](https://user-images.githubusercontent.com/63171080/182594596-00ee51d9-6668-4b56-aa29-348553a93a67.png)
+<!-- ![terminal](https://user-images.githubusercontent.com/63171080/182594596-00ee51d9-6668-4b56-aa29-348553a93a67.png) -->
 
 ## Use in IntelliJ
 
