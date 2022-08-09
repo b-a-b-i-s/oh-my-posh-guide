@@ -69,7 +69,7 @@
           "powerline_symbol": "\uE0B0",
           "foreground": "#ffffff",
           "background": "#4063D8",
-          "template": " \uE738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Major }}{{ end }} "
+          "template": " \uE738 {{ if gt .Major .Minor}}{{ .Major }}{{ else }}{{ .Major }}.{{ .Minor }}{{ end }} "
         },
         {
           "background": "#6CA35E",
