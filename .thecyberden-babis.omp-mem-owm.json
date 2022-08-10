@@ -165,6 +165,32 @@
           "type": "root"
         },
         {
+          "type":"sysinfo",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#8f43f3",
+          "template":" \uf85a {{ round .PhysicalPercentUsed .Precision }}% ",
+          "properties": {
+            "precision": 2
+          },
+          "style":"powerline"
+        },
+        {
+          "type": "owm",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#FF0000",
+          "template": " {{.Weather}}({{.Temperature}}{{.UnitIcon}}) ",
+          "properties": {
+            "apikey": "15798d53af4e47c6c8818ec340b7ebe1",
+            "location": "ATHENS,GR",
+            "units": "metric",
+            "http_timeout": 200,
+            "cache_timeout": 5
+          }
+        },
+        {
           "type": "strava",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
@@ -258,6 +284,15 @@
       "alignment": "left",
       "newline": true,
       "segments": [
+        {
+          "background": "#ebcc34",
+          "foreground": "#000000",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " \ufd31 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "kubectl"
+        },
         {
           "background": "#9ec3f0",
           "foreground": "#000000",

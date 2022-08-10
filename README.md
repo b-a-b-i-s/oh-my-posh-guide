@@ -67,6 +67,10 @@ eval "$(oh-my-posh init bash --config ~/<mytheme>.omp.json)"
 
 Inside the WSL, you can find your Windows user's home folder here: `/mnt/c/Users/<WINDOWSUSERNAME>`.
 
+## Strava
+
+To use Strava in my custom theme connect from [here](https://ohmyposh.dev/docs/segments/strava) and edit the access_token and refresh_token in the json theme file.
+
 ## Note
 
 Sadly icons aren't shown in Powershell app by itself because installed fonts aren't detected in Powershell settings. This can be fixed by editing registry as found [here](https://github.com/andreberg/Meslo-Font/wiki/Using-Meslo-LG-with-the-Windows-Console) or [here](https://www.softwareok.com/?seite=faq-PowerShell&faq=3) or [here](https://superuser.com/questions/502340/how-can-i-install-a-new-font-in-powershell-console) which isn't available in company laptops. After a registry change even with just one font addition (or none at all ?) all installed fonts even if not listed in registry will probably show up in Powershell settings.
