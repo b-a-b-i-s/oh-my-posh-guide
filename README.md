@@ -33,7 +33,19 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\thecyberden.omp.json | Invok
 
 All themes available at: <https://ohmyposh.dev/docs/themes>
 
-I have customized the thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it and add a link to it as shown above.
+I have customized the thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it, add it to your user folder and add a link to it as shown bellow.
+
+Windows:
+
+```txt
+oh-my-posh init pwsh --config $ENV:USERPROFILE/.thecyberden-babis.omp.json | Invoke-Expression
+```
+
+Linux (might work in Windows too, might not):
+
+```txt
+oh-my-posh init pwsh --config ~/.thecyberden-babis.omp.json | Invoke-Expression
+```
 
 ## Use nerd font to show icons
 
