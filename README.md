@@ -65,11 +65,17 @@ Settings > Defaults > Appearance > Font face > MesloLGM NF / MesloLGS NF / Caska
 
 <!-- ![terminal](https://user-images.githubusercontent.com/63171080/182594596-00ee51d9-6668-4b56-aa29-348553a93a67.png) -->
 
+## Use in ConEmu
+
+Settings > General > Fonts > Main console font > fontMesloLGM NF / MesloLGS NF / CaskaydiaCove NF
+
+Settings > General > Fonts > Alternative font > fontMesloLGM NF / MesloLGS NF / CaskaydiaCove NF
+
 ## Use in IntelliJ
 
 File > Settings > Editor > Font > Typography Settings > Fallback font > MesloLGM NF
 
-## Use in bash
+## Use for bash
 
 You can use this in wsl or Linux by adding the following to your `~/.bashrc` and `/root/.profile`.
 
