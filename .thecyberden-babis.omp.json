@@ -50,14 +50,6 @@
           "type": "git"
         },
         {
-          "type": "project",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#193549",
-          "background": "#ffeb3b",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}\uf487 {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
-        },
-        {
           "type": "java",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
@@ -157,12 +149,12 @@
           "template": " \uE753 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
         },
         {
-          "background": "#ffff66",
-          "foreground": "#111111",
-          "powerline_symbol": "\ue0b0",
+          "type": "project",
           "style": "powerline",
-          "template": " \uf0ad ",
-          "type": "root"
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}\uf487 {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
         },
         {
           "type": "strava",
@@ -183,7 +175,7 @@
           "template": " {{.Icon}} {{.Ago}} ",
           "properties": {
             "access_token": "11111111111111111",
-            "refresh_token": "1111111111111111",
+            "refresh_token": "11111111111111111",
             "expires_in": 21600,
             "http_timeout": 1500,
             "CacheTimeout": 30
