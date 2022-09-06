@@ -33,7 +33,19 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\thecyberden.omp.json | Invok
 
 All themes available at: <https://ohmyposh.dev/docs/themes>
 
-I have customized the thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it and add a link to it as shown above.
+I have customized the thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it, add it to your user folder and add a link to it as shown bellow.
+
+Windows:
+
+```txt
+oh-my-posh init pwsh --config $ENV:USERPROFILE/.thecyberden-babis.omp.json | Invoke-Expression
+```
+
+Linux (might work in Windows too, might not):
+
+```txt
+oh-my-posh init pwsh --config ~/.thecyberden-babis.omp.json | Invoke-Expression
+```
 
 ## Use nerd font to show icons
 
@@ -53,11 +65,17 @@ Settings > Defaults > Appearance > Font face > MesloLGM NF / MesloLGS NF / Caska
 
 <!-- ![terminal](https://user-images.githubusercontent.com/63171080/182594596-00ee51d9-6668-4b56-aa29-348553a93a67.png) -->
 
+## Use in ConEmu
+
+Settings > General > Fonts > Main console font > fontMesloLGM NF / MesloLGS NF / CaskaydiaCove NF
+
+Settings > General > Fonts > Alternative font > fontMesloLGM NF / MesloLGS NF / CaskaydiaCove NF
+
 ## Use in IntelliJ
 
 File > Settings > Editor > Font > Typography Settings > Fallback font > MesloLGM NF
 
-## Use in bash
+## Use for bash
 
 You can use this in wsl or Linux by adding the following to your `~/.bashrc` and `/root/.profile`.
 
