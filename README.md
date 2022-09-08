@@ -7,13 +7,29 @@
 
 ## Installation
 
-Instructions: <https://ohmyposh.dev/docs/installation/windows>
+### Windows
 
-Or simply type
+  Instructions: <https://ohmyposh.dev/docs/installation/windows>
 
-```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
-```
+  Or simply type
+
+  ```powershell
+  winget install JanDeDobbeleer.OhMyPosh -s winget
+  ```
+
+### macOS
+
+  Instructions: <https://ohmyposh.dev/docs/installation/macos>
+
+  Or simply type
+
+  ```powershell
+  brew install jandedobbeleer/oh-my-posh/oh-my-posh
+  ```
+
+### Linux
+
+  Instructions: <https://ohmyposh.dev/docs/installation/linux>
 
 ## Configure Powershell
 
@@ -28,28 +44,25 @@ oh-my-posh init pwsh | Invoke-Expression
 To use a custom theme type the following line instead:
 
 ```txt
-oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\thecyberden.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/thecyberden.omp.json | Invoke-Expression
 ```
 
 All themes available at: <https://ohmyposh.dev/docs/themes>
 
-I have customized the thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it, add it to your user folder and add a link to it as shown bellow.
+I have customized the theme called thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it, add it to your user folder and add a link to it as shown bellow.
 
-Windows:
-
-```txt
-oh-my-posh init pwsh --config $ENV:USERPROFILE/.thecyberden-babis.omp.json | Invoke-Expression
-```
-
-Linux (might work in Windows too, might not):
-
-```txt
-oh-my-posh init pwsh --config ~/.thecyberden-babis.omp.json | Invoke-Expression
+```pwsh
+if ($ENV:USERPROFILE) {
+  oh-my-posh init pwsh --config $ENV:USERPROFILE/.thecyberden-babis.omp.json | Invoke-Expression
+}
+else {
+  oh-my-posh init pwsh --config ~/.thecyberden-babis.omp.json | Invoke-Expression
+}
 ```
 
 ## Use nerd font to show icons
 
-Nerd Fonts are used to show icons in the console. [Website](https://www.nerdfonts.com/) | [Github](https://github.com/ryanoasis/nerd-fonts)
+Oh My Posh was designed to use Nerd Fonts. Nerd Fonts are popular fonts that are patched to include icons. [Website](https://www.nerdfonts.com/) | [Github](https://github.com/ryanoasis/nerd-fonts)
 
 You can use any nerd font. I recommend Meslo or Caskaydia Cove.
 
