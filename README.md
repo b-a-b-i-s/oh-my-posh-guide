@@ -74,7 +74,7 @@ For Open Weather Maps segment (for my custom theme) to show correctly in Windows
 
 ## Use in Windows Terminal
 
-Settings > Defaults > Appearance > Font face > MesloLGM NF / MesloLGS NF / CaskaydiaCove NF
+Settings > Defaults > Appearance > Font face > MesloLGM NF / MesloLGS NF / CaskaydiaCove NF > Save
 
 <!-- ![terminal](https://user-images.githubusercontent.com/63171080/182594596-00ee51d9-6668-4b56-aa29-348553a93a67.png) -->
 
@@ -88,7 +88,7 @@ Settings > General > Fonts > Alternative font > fontMesloLGM NF / MesloLGS NF / 
 
 File > Settings > Editor > Font > Typography Settings > Fallback font > MesloLGM NF
 
-## Use for bash
+## Use in bash
 
 You can use this in wsl or Linux by adding the following to your `~/.bashrc` and `/root/.profile`.
 
@@ -97,6 +97,10 @@ eval "$(oh-my-posh init bash --config ~/<mytheme>.omp.json)"
 ```
 
 Inside the WSL, you can find your Windows user's home folder here: `/mnt/c/Users/<WINDOWSUSERNAME>`.
+
+## Use in other shells
+
+See: <https://ohmyposh.dev/docs/installation/prompt>
 
 ## Strava
 
