@@ -55,7 +55,7 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/thecyberden.omp.json | Invok
 
 All themes available at: <https://ohmyposh.dev/docs/themes>
 
-I have customized the theme called thecyberden with some extra stuff in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it, add it to your user folder and add a link to it as shown bellow.
+I have customized the theme called thecyberden with some extras in [.thecyberden-babis.omp.json](./.thecyberden-babis.omp.json). You can download it, add it to your user folder and add a link to it as shown bellow.
 
 ```pwsh
 if ($ENV:USERPROFILE) {

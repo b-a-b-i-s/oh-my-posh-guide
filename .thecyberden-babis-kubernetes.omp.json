@@ -50,14 +50,6 @@
           "type": "git"
         },
         {
-          "type": "project",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#193549",
-          "background": "#ffeb3b",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}\uf487 {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
-        },
-        {
           "type": "java",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
@@ -157,12 +149,12 @@
           "template": " \uE753 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
         },
         {
-          "background": "#ffff66",
-          "foreground": "#111111",
-          "powerline_symbol": "\ue0b0",
+          "type": "project",
           "style": "powerline",
-          "template": " \uf0ad ",
-          "type": "root"
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}\uf487 {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
         },
         {
           "type": "strava",
@@ -183,7 +175,7 @@
           "template": " {{.Icon}} {{.Ago}} ",
           "properties": {
             "access_token": "11111111111111111",
-            "refresh_token": "1111111111111111",
+            "refresh_token": "11111111111111111",
             "expires_in": 21600,
             "http_timeout": 1500,
             "CacheTimeout": 30
@@ -221,25 +213,6 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#f36943",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "<#2e9599,background>\ue0b2</>",
-          "properties": {
-            "charged_icon": "\ue22f ",
-            "charging_icon": "\ue234 ",
-            "discharging_icon": "\ue231 "
-          },
-          "style": "diamond",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
-          "type": "battery"
-        },
-        {
           "background": "#2e9599",
           "foreground": "#ffffff",
           "invert_powerline": true,
@@ -247,7 +220,8 @@
             "time_format": "15:04:05"
           },
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} ",
+          "leading_diamond": "\ue0b6",
+          "template": "{{ .CurrentDate | date .Format }}",
           "trailing_diamond": "\ue0b4",
           "type": "time"
         }
@@ -258,6 +232,15 @@
       "alignment": "left",
       "newline": true,
       "segments": [
+        {
+          "background": "#ebcc34",
+          "foreground": "#000000",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " \ufd31 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "kubectl"
+        },
         {
           "background": "#9ec3f0",
           "foreground": "#000000",

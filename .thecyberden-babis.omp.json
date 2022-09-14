@@ -157,31 +157,6 @@
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}\uf487 {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
         },
         {
-          "type": "strava",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
-          "background": "#000000",
-          "background_templates": [
-            "{{ if gt .Hours 100 }}#dc3545{{ end }}",
-            "{{ if and (lt .Hours 100) (gt .Hours 50) }}#ffc107{{ end }}",
-            "{{ if lt .Hours 50 }}#28a745{{ end }}"
-          ],
-          "foreground_templates": [
-            "{{ if gt .Hours 100 }}#FFFFFF{{ end }}",
-            "{{ if and (lt .Hours 100) (gt .Hours 50) }}#343a40{{ end }}",
-            "{{ if lt .Hours 50 }}#FFFFFF{{ end }}"
-          ],
-          "template": " {{.Icon}} {{.Ago}} ",
-          "properties": {
-            "access_token": "11111111111111111",
-            "refresh_token": "11111111111111111",
-            "expires_in": 21600,
-            "http_timeout": 1500,
-            "CacheTimeout": 30
-          }
-        },
-        {
           "background": "#83769c",
           "foreground": "#ffffff",
           "properties": {
@@ -232,15 +207,6 @@
       "alignment": "left",
       "newline": true,
       "segments": [
-        {
-          "background": "#ebcc34",
-          "foreground": "#000000",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": " \ufd31 Kubernetes {{.Context}} cluster {{if .Namespace}}- {{.Namespace}} namespace{{end}} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "kubectl"
-        },
         {
           "background": "#9ec3f0",
           "foreground": "#000000",
