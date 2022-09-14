@@ -33,6 +33,12 @@
 
 ## Configure Powershell
 
+### PowerShell Core vs Windows Powershell
+
+I recommend using PowerShell Core ([Microsoft](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows) | [Github](https://github.com/PowerShell/PowerShell)) instead of the defaul Windows PowerShell as it is multi-platform and uses UTF-8 by default for writing files instead of UTF-16LE. See [this](https://stackoverflow.com/a/40098904) answer in stackoverflow for more info on PowerShell encodings
+
+### Configuration for either PowerShell
+
 `notepad $PROFILE.CurrentUserAllHosts` (Create new file with `New-Item -Path $PROFILE.CurrentUserAllHosts -Type File -Force` if not prompted to create)
 
 Add the following line to the file
