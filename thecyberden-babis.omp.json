@@ -163,7 +163,7 @@
             "always_enabled": true
           },
           "style": "powerline",
-          "template": "<parentBackground,background>\ue0b0</> \ufbab{{ .FormattedMs }} ",
+          "template": "<parentBackground,background>\ue0b0</> \ueba2 {{ .FormattedMs }} ",
           "type": "executiontime"
         },
         {
@@ -179,7 +179,7 @@
           "style": "diamond",
           "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }} ",
           "trailing_diamond": "\ue0b4",
-          "type": "exit"
+          "type": "status"
         }
       ],
       "type": "prompt"
