@@ -6,7 +6,8 @@
       "segments": [
         {
           "background": "#2e9599",
-          "foreground": "#ffffff","leading_diamond": "\ue0b6",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": "{{ if .WSL }}\uf68e {{ end }}{{.Icon}}",
           "type": "os"
@@ -99,7 +100,7 @@
             "fetch_virtual_env": false
           },
           "style": "powerline",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "type": "python"
         },
         {
@@ -115,10 +116,7 @@
           "type": "ruby"
         },
         {
-          "background_templates": [
-            "{{if contains \"default\" .Profile}}#FFA400{{end}}",
-            "{{if contains \"jan\" .Profile}}#f1184c{{end}}"
-          ],
+          "background_templates": ["{{if contains \"default\" .Profile}}#FFA400{{end}}", "{{if contains \"jan\" .Profile}}#f1184c{{end}}"],
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "properties": {
@@ -168,9 +166,7 @@
         },
         {
           "background": "#2e9599",
-          "background_templates": [
-            "{{ if gt .Code 0 }}p:red{{ end }}"
-          ],
+          "background_templates": ["{{ if gt .Code 0 }}p:red{{ end }}"],
           "foreground": "p:white",
           "leading_diamond": "<parentBackground,background>\ue0b0</>",
           "properties": {
@@ -212,7 +208,7 @@
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " \ufd03 Subscription {{ .Name }} ({{ if .EnvironmentName | contains \"AzureCloud\" }}{{ \"Global\" }}{{ else }}{{ .EnvironmentName }}{{ end }}) ",
+          "template": "   Subscription {{ .Name }} ({{ if .EnvironmentName | contains \"AzureCloud\" }}{{ \"Global\" }}{{ else }}{{ .EnvironmentName }}{{ end }}) ({{ .User.Name }})",
           "type": "az"
         }
       ],
