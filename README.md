@@ -110,7 +110,7 @@ See: <https://ohmyposh.dev/docs/installation/prompt>
 
 ## Strava
 
-To use Strava in my custom theme connect from [here](https://ohmyposh.dev/docs/segments/strava) and edit the access_token and refresh_token in the json theme file.
+To use Strava in my custom theme connect from [here](https://ohmyposh.dev/docs/segments/health/strava) and edit the access_token and refresh_token in the json theme file.
 
 ## Note
 
